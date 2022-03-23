@@ -1,0 +1,27 @@
+@import "../../App.scss";
+.button {
+  background: white;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+
+  padding: 1rem;
+  border: none;
+  color: $pink;
+}
+
+.button-container {
+  flex: 1 1 100%;
+}
+
+.main {
+  font-family: "Synthia", Roboto;
+  font-size: 15rem;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: column;
+}
