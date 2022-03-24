@@ -34,13 +34,13 @@ const Hero = ({ children }) => {
         setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 0);
         setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 500);
         setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1100);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1200);
         setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1300);
         setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1700);
+        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 2000);
 
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 10000);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 11000);
-      }, 20000);
+        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 5000);
+        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 6000);
+      }, 10000);
       return () => clearInterval(interval);
     }
   }, [powerOn]);
@@ -52,7 +52,7 @@ const Hero = ({ children }) => {
         <button
           className={`${styles.button} ${powerOn && "neon-box-shadow"} ${
             powerOn && "neon-box-shadow-fade"
-          } neon-on-white`}
+          } ${powerOn ? "neon-on-white": styles.buttonOff}`}
           onClick={handleClick}
         >
           Turn {powerOn ? "Off" : "On"}
