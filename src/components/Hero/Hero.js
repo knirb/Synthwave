@@ -21,29 +21,29 @@ const Hero = ({ children }) => {
   let lightOnRef = useRef(lightOn);
   let powerOnRef = useRef(powerOn);
 
-  useEffect(() => {
-    lightOnRef.current = lightOn;
-  }, [lightOn]);
-  useEffect(() => {
-    powerOnRef.current = powerOn;
-  }, [powerOn]);
+  // useEffect(() => {
+  //   lightOnRef.current = lightOn;
+  // }, [lightOn]);
+  // useEffect(() => {
+  //   powerOnRef.current = powerOn;
+  // }, [powerOn]);
 
-  useEffect(() => {
-    if (powerOn) {
-      const interval = setInterval(() => {
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 0);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 500);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1100);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1300);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1700);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 2000);
+  // useEffect(() => {
+  //   if (powerOn) {
+  //     const interval = setInterval(() => {
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 0);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 500);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1100);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1300);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 1700);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 2000);
 
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 5000);
-        setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 6000);
-      }, 10000);
-      return () => clearInterval(interval);
-    }
-  }, [powerOn]);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 5000);
+  //       setTimeout(() => setLightOn(powerOnRef.current ? !lightOnRef.current : false), 6000);
+  //     }, 10000);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [powerOn]);
 
   return (
     <div className={`${styles.main} ${getNeonClass()} ${getFade()}`}>
